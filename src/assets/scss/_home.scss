@@ -1,0 +1,76 @@
+.home {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(1, 0, 0, 0.33), rgba(1, 0, 0, 0.33)), url(../img/brooklyn-bridge-bg.jpg);
+}
+  
+.video-box {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    box-shadow: inset 0 0 2px 2px rgba(255, 255, 255, .7);
+    background-color: rgba(0,0,0,.774);
+    margin: 30px 10px;
+    max-width: 580px;
+    padding: 50px 30px 30px;
+    animation: videoanimation 1.5s ease-in-out;
+
+    .video-box-skrew {
+        position: absolute;
+        z-index: 10;
+        background: url(../img/skrew.png);
+        width: 15px;
+        height: 15px;
+        &.skrew1 {
+            top: 5px;
+            left: 5px
+        }
+        &.skrew2 {
+            top:5px;
+            right:5px;
+        }
+        &.skrew3 {
+            bottom: 5px;
+            left: 5px;
+        }
+        &.skrew4 {
+            bottom: 5px;
+            right: 5px;
+        }
+    }
+    .video-box-title {
+        position: absolute;
+        top: -124px;
+        left: 50px;
+        max-width: 225px;
+        padding-right: 30px;
+        text-align: left;
+        animation: videoanimation 2s ease-in-out 0.1s;
+    }
+    .video-box-content {
+        position: relative;
+        width: 100%;
+        animation: videoanimation 2s ease-in-out 0.1s;
+        &_img {
+            position: absolute;
+        }
+    }
+}
+
+@keyframes videoanimation {
+    from {right: -1000px;}
+    to {right: 0px}
+    0% {opacity: 0.1;}
+    25% {opacity: 0.2;}
+    50% {opacity: 0.4;}
+    75% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+
+  
