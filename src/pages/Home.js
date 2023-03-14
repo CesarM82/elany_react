@@ -4,8 +4,6 @@ import videoImg from '../assets/img//video-overlay.jpg'
 
 const Home = () => {
     const [isThumb, setIsThumb] = useState(true);
-
-    const [tabKey, setTabKey] = useState('');
     
     const handleIsThumb = () => {
         setIsThumb(!isThumb);

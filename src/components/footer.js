@@ -9,7 +9,6 @@ const Footer = () => {
                         <p>646.292.5500 | info@elany.org | elanyhelpdesk@elany.org</p>
                         <p>121 Wall Street | 24th Floor | New York, NY 10006</p>
                     </div>
-                    <p className='text-white text-center underline pt-3'><Link to="/">SubScribe</Link> | <Link to="/">UnsubScribe</Link></p>
                 </div>
             </div>
         </>

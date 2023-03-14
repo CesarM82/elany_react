@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { BrowserRouter as Router, Switch, Route, useHistory} from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Switch, Route, Redirect} from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import Home from './pages/Home';
-import About from './pages/About'
+import About from './pages/About';
+import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 
 import Sidebar from './components/sidebar';
@@ -11,17 +11,11 @@ import Footer from './components/footer';
 import './App.scss';
  
 function App() {
-    const history = useHistory();
     const [collapsed, setCollapsed] = useState(false);
-    const [image, setImage] = useState(false);
     const [toggled, setToggled] = useState(false);
 
     const handleCollapsedChange = () => {
         setCollapsed(!collapsed);
-    };
-
-    const handleImageChange = (checked) => {
-        setImage(checked);
     };
 
     const handleToggleSidebar = (value) => {
@@ -29,10 +23,8 @@ function App() {
     };    
     return (
         <div className="App">
-            <Router history={history}>
                 <div className={`app ${toggled ? 'toggled' : ''}`}>
                     <Sidebar
-                        image={image}
                         collapsed={collapsed}
                         toggled={toggled}
                         handleToggleSidebar={handleToggleSidebar}
@@ -42,18 +34,16 @@ function App() {
                         <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
                             <FaBars />
                         </div>
-                        <div><Link to="about">About</Link></div>
                         <Switch>
-                            <Route path="/about" element={<About/>} />
+                            <Route path="/about" component={About} />
+                            <Route path="/profile" component={Profile} />
                             <Route path="/not-found" component={NotFound} />
-                            <Route path="/" exact>
-                                <Home image={image} handleImageChange={handleImageChange} />
-                            </Route>
+                            <Route path="/" exact component={Home}/>
+                            <Redirect to="/not-found"/>
                         </Switch>
                         <Footer/>
                     </main>
                 </div>
-            </Router>
         </div>
     );
 }

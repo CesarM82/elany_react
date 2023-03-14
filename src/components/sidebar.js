@@ -21,7 +21,6 @@ import logoImg from '../assets/img/logo.png';
 import sidebarBg from '../assets/img/logo.png';
 
 const Sidebar = ({
-    image,
     collapsed,
     toggled,
     handleToggleSidebar,
@@ -29,7 +28,6 @@ const Sidebar = ({
 }) => {
     return (
         <ProSidebar
-            image={image ? sidebarBg : false}
             collapsed={collapsed}
             toggled={toggled}
             onToggle={handleToggleSidebar}
@@ -66,51 +64,51 @@ const Sidebar = ({
                     <Link to="/" />
                 </MenuItem>
                 <SubMenu title={'About'} icon={<FaRegLaughWink />}>
-                    <MenuItem>About Us <Link to="/about" onClick={() => window.location.reload()}/></MenuItem>
-                    <MenuItem>Contacts Us <Link to="/contactUs"/> </MenuItem>
-                    <MenuItem>Board of Directors <NavLink to="/" /></MenuItem>
-                    <MenuItem>Procudure Manual<NavLink to="/" /></MenuItem>
-                    <MenuItem>Elany Staff<Link to="/" /></MenuItem>
+                    <MenuItem>About Us <Link to="about"/></MenuItem>
+                    <MenuItem>Contacts Us <Link to="contactUs"/> </MenuItem>
+                    <MenuItem>Board of Directors <NavLink to="board" /></MenuItem>
+                    <MenuItem>Procudure Manual<NavLink to="procedure-maual" /></MenuItem>
+                    <MenuItem>Elany Staff<Link to="staff" /></MenuItem>
                 </SubMenu>
                 
                 <SubMenu title={'Publications'} icon={<FaList />}>
-                    <MenuItem>Annual Reports<Link to="/" /></MenuItem>
-                    <MenuItem>Bulletins<Link to="/" /></MenuItem>
-                    <MenuItem>Newsletter<Link to="/" /></MenuItem>
-                    <MenuItem>Compliance Advisor<Link to="/" /></MenuItem>
-                    <MenuItem>ELANY Ellaborates<Link to="/" /></MenuItem>
-                    <MenuItem>Video Library<Link to="/" /></MenuItem>
-                    <MenuItem>Forms<Link to="/" /></MenuItem>
-                    <MenuItem>Electronic Part<Link to="/" /></MenuItem>
+                    <MenuItem>Annual Reports<Link to="anual-reports" /></MenuItem>
+                    <MenuItem>Bulletins<Link to="bulletines" /></MenuItem>
+                    <MenuItem>Newsletter<Link to="newsletter" /></MenuItem>
+                    <MenuItem>Compliance Advisor<Link to="comliance-advisor" /></MenuItem>
+                    <MenuItem>ELANY Ellaborates<Link to="elany-ellaborates" /></MenuItem>
+                    <MenuItem>Video Library<Link to="video-library" /></MenuItem>
+                    <MenuItem>Forms<Link to="forms" /></MenuItem>
+                    <MenuItem>Electronic Part<Link to="electronic-part" /></MenuItem>
                 </SubMenu>
                 
                 <MenuItem icon={<FaGem />}>
-                    ELANY Says <Link to="/" />
+                    ELANY Says <Link to="elany-says" />
                 </MenuItem>
 
                 <SubMenu title={'Coverage Codes'} icon={<FaList />}>
-                    <MenuItem>Coverage Codes<Link to="/" /></MenuItem>
-                    <MenuItem>Export List Codes<Link to="/" /></MenuItem>
-                    <MenuItem>Insured Business Description Codes<Link to="/" /></MenuItem>
+                    <MenuItem>Coverage Codes<Link to="corverage-codes" /></MenuItem>
+                    <MenuItem>Export List Codes<Link to="export-codes" /></MenuItem>
+                    <MenuItem>Insured Business Description Codes<Link to="insured-codes" /></MenuItem>
                 </SubMenu>
 
                 <SubMenu title={'Electronico Filling Portal'} icon={<FaList />}>
-                    <MenuItem>Registered User Login<Link to="/" /></MenuItem>
-                    <MenuItem>To Register a New User/EFS Resourc<Link to="/" /></MenuItem>
+                    <MenuItem>Registered User Login<Link to="registered-login" /></MenuItem>
+                    <MenuItem>To Register a New User/EFS Resourc<Link to="to-resource" /></MenuItem>
                 </SubMenu>
 
                 <SubMenu title={'Market Data'} icon={<FaList />}>
                     <SubMenu title={'NY Premium & Transactions by RiskType'}>
-                        <MenuItem>Summary Report<Link to="/" /></MenuItem>
-                        <MenuItem>Risk Type (SIC Codes) by Coverage Category<Link to="/" /></MenuItem>
+                        <MenuItem>Summary Report<Link to="summary-report" /></MenuItem>
+                        <MenuItem>Risk Type (SIC Codes) by Coverage Category<Link to="rist-category" /></MenuItem>
                     </SubMenu>
-                    <MenuItem>NY Premium by Coverage Category<Link to="/" /></MenuItem>
-                    <MenuItem>NY Statistics By Other Categories<Link to="/" /></MenuItem>
-                    <MenuItem>Wholesalers vs. Retailers Summary<Link to="/" /></MenuItem>
+                    <MenuItem>NY Premium by Coverage Category<Link to="ny-pre-category" /></MenuItem>
+                    <MenuItem>NY Statistics By Other Categories<Link to="ny-stat-category" /></MenuItem>
+                    <MenuItem>Wholesalers vs. Retailers Summary<Link to="whole-summary" /></MenuItem>
                     <SubMenu title={'NY Premium by Insurers'}>
-                        <MenuItem>Top 10 Insurers<Link to="/" /></MenuItem>
-                        <MenuItem>Top 25 Insurance Groups<Link to="/" /></MenuItem>
-                        <MenuItem>Premium by Each Foregin Insurers<Link to="/" /></MenuItem>
+                        <MenuItem>Top 10 Insurers<Link to="top-100" /></MenuItem>
+                        <MenuItem>Top 25 Insurance Groups<Link to="top-25" /></MenuItem>
+                        <MenuItem>Premium by Each Foregin Insurers<Link to="premium-insurers" /></MenuItem>
                     </SubMenu>
                 </SubMenu>
 
